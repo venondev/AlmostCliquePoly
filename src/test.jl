@@ -133,6 +133,12 @@ function run(mode::Int, outFile::String, folder::String)
     end
 end
 
+if size(ARGS, 1) == 0
+    println("Missing argument for test folder")
+    println("Please call the algorithm with ./runTest path/to/pace/dataset/root/data/weighted")
+    exit(1)
+end
+
 run(0, "../out_heuristik.csv", ARGS[1])
 run(1, "../out_poly_exhaus.csv", ARGS[1])
 run(2, "../out_ln_exhaus.csv", ARGS[1])
