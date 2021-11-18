@@ -1,10 +1,16 @@
 # Introduction
-TODO
+This code is part of my bachelor thesis "On Efficient Cut-Based Data Reduction for Weighted Cluster Editing". It implements a data reduction rule called "AlmostClique" by Böcker et al. with polynomial running time and several optimizations to speed up the practical running time. 
+
+The details on the data reduction rule can be found [here](https://link.springer.com/article/10.1007/s00453-009-9339-7)
+
+The complete thesis will be available shortly.
 
 # Installation
 
+In this project, we use Julia as the main programming language and a C++ minimum cut implementation and heuristic for AlmostClique which we embed using CxxWrap for Julia.
+
 ## Julia
-Install the Julia interpreter from https://julialang.org/downloads/
+Install the Julia interpreter [here](https://julialang.org/downloads/)
 
 Afterwards, install the following packages by first opening the julia interactive shell, pressing "ALTGR + ]" and entering the following command.
 
@@ -23,11 +29,11 @@ Then, execute the build script build.sh .
 
 ## Test Dataset 
 To test our implementation, we used the PACE Challenge 2021 Dataset.
-Please follow the install instructions here: https://github.com/PACE-challenge/Cluster-Editing-PACE-2021-instances
+Please follow the install instructions [here](https://github.com/PACE-challenge/Cluster-Editing-PACE-2021-instances)
 
 # Usage
 
-To run polynomial time algorithm, the neighbourhood heuristic and almost clique heuristic tests run the following command:
+To run the polynomial-time algorithm, the Large Neighbourhood heuristic and AlmostClique heuristic tests run the following command:
 ```
 ./runTest.sh path/to/pace/dataset/root/data/weighted
 ```

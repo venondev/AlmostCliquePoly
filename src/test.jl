@@ -133,6 +133,6 @@ function run(mode::Int, outFile::String, folder::String)
     end
 end
 
-#run(0, "../out_heuristik.csv", ARGS[1])
+run(0, "../out_heuristik.csv", ARGS[1])
 run(1, "../out_poly_exhaus.csv", ARGS[1])
 run(2, "../out_ln_exhaus.csv", ARGS[1])
